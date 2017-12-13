@@ -8,9 +8,12 @@
         "appServicePlanName": {
           "value": "#{appServicePlanName}#"
         },
-        "redispwduri": {
+        "redisName": {
+          "value": "#{redisName}#"
+        },
+        "redisPrimaryKeySecretUri": {
           "value": "https://#{keyVaultName}#.vault.azure.net/secrets/#{keyVaultSecretName}#"
         }
     }
-    
+
   }

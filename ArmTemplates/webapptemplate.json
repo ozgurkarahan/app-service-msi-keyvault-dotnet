@@ -10,6 +10,9 @@
 		},
 		"redisPrimaryKeySecretUri": {
 			"type": "string"
+		},
+		"redisName": {
+			"type": "string"
 		}
 	},
 	"variables": {
@@ -82,6 +85,9 @@
                     "appSettings": [                        						
 						{
 							"name": "redisPrimaryKeySecretUri",	"value": "[parameters('redisPrimaryKeySecretUri')]"
+						},
+						{
+							"name": "redisName", "value": "[parameters('redisName')]"
 						}
                     ]
 				}
