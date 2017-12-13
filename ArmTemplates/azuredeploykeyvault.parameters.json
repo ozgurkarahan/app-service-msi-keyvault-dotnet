@@ -5,11 +5,11 @@
         "webSiteName": {
           "value": "#{webSiteName}#"
         },
+		"redisCacheName": {
+			"value": "#{redisCacheName}#"
+		},
         "keyVaultName": {
           "value": "#{keyVaultName}#"
-		},
-		"keyVaultSecretValue": {
-			"value": "#{keyVaultSecretValue}#"
 		},
 		"keyVaultSecretName": {
 			"value": "#{keyVaultSecretName}#"

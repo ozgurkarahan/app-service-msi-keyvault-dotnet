@@ -8,10 +8,9 @@
 		"appServicePlanName": {
 			"type": "string"
 		},
-		"redispwduri": {
+		"redisConnectionStringSecretUri": {
 			"type": "string"
 		}
-			
 	},
 	"variables": {
         "webapp-Front": "[parameters('webAppName')]",
@@ -82,7 +81,7 @@
 					"javaVersion": null,
                     "appSettings": [                        						
 						{
-							"name": "redispwduri",	"value": "[parameters('redispwduri')]"
+							"name": "redisConnectionStringSecretUri",	"value": "[parameters('redisConnectionStringSecretUri')]"
 						}
                     ]
 				}
