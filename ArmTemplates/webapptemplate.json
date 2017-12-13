@@ -8,7 +8,7 @@
 		"appServicePlanName": {
 			"type": "string"
 		},
-		"redisConnectionStringSecretUri": {
+		"redisPrimaryKeySecretUri": {
 			"type": "string"
 		}
 	},
@@ -81,7 +81,7 @@
 					"javaVersion": null,
                     "appSettings": [                        						
 						{
-							"name": "redisConnectionStringSecretUri",	"value": "[parameters('redisConnectionStringSecretUri')]"
+							"name": "redisPrimaryKeySecretUri",	"value": "[parameters('redisPrimaryKeySecretUri')]"
 						}
                     ]
 				}
