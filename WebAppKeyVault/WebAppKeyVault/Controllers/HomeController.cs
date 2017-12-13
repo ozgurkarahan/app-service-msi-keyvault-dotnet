@@ -13,7 +13,7 @@ namespace WebAppKeyVault.Controllers
         {
             var azureServiceTokenProvider = new AzureServiceTokenProvider();
             var redisUri = ConfigurationManager.AppSettings["redisPrimaryKeySecretUri"];
-            var redisName = ConfigurationManager.AppSettings["redisName"];
+            var redisCacheName = ConfigurationManager.AppSettings["redisCacheName"];
             
             try
             {
@@ -22,7 +22,7 @@ namespace WebAppKeyVault.Controllers
 
                 var secret = await keyVaultClient.GetSecretAsync(redisUri).ConfigureAwait(false);
                 ViewBag.Secret = $"Secret: {secret.Value}";
-                RedisConnectionString = string.Format(ConfigurationManager.AppSettings["redisConnectionString"], redisName, secret.Value);
+                RedisConnectionString = string.Format(ConfigurationManager.AppSettings["redisConnectionString"], redisCacheName, secret.Value);
 
                 ViewBag.RedisConnectionString = $"RedisConnectionString: {RedisConnectionString}";
             }

@@ -8,8 +8,8 @@
         "appServicePlanName": {
           "value": "#{appServicePlanName}#"
         },
-        "redisName": {
-          "value": "#{redisName}#"
+        "redisCacheName": {
+          "value": "#{redisCacheName}#"
         },
         "redisPrimaryKeySecretUri": {
           "value": "https://#{keyVaultName}#.vault.azure.net/secrets/#{keyVaultSecretName}#"

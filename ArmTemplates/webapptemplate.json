@@ -11,7 +11,7 @@
 		"redisPrimaryKeySecretUri": {
 			"type": "string"
 		},
-		"redisName": {
+		"redisCacheName": {
 			"type": "string"
 		}
 	},
@@ -87,7 +87,7 @@
 							"name": "redisPrimaryKeySecretUri",	"value": "[parameters('redisPrimaryKeySecretUri')]"
 						},
 						{
-							"name": "redisName", "value": "[parameters('redisName')]"
+							"name": "redisCacheName", "value": "[parameters('redisCacheName')]"
 						}
                     ]
 				}
