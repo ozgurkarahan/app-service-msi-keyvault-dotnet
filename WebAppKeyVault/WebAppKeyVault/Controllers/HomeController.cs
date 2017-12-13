@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using Microsoft.Azure.KeyVault;
 using Microsoft.Azure.Services.AppAuthentication;
+using System.Configuration;
 
 namespace WebAppKeyVault.Controllers
 {
@@ -9,18 +10,16 @@ namespace WebAppKeyVault.Controllers
     {
         public async System.Threading.Tasks.Task<ActionResult> Index()
         {
-            AzureServiceTokenProvider azureServiceTokenProvider = new AzureServiceTokenProvider();
+            var azureServiceTokenProvider = new AzureServiceTokenProvider();
+            var redisUri = ConfigurationManager.AppSettings["redisPrimaryKeySecretUri"];
 
             try
             {
                 var keyVaultClient = new KeyVaultClient(
                     new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback));
 
-                var secret = await keyVaultClient.GetSecretAsync("https://appmsi5kv.vault.azure.net/secrets/secret")
-                    .ConfigureAwait(false);
-
-                ViewBag.Secret = $"Secret: {secret.Value}";
-                
+                var secret = await keyVaultClient.GetSecretAsync(redisUri).ConfigureAwait(false);
+                ViewBag.Secret = $"Secret: {secret.Value}";                
             }
             catch (Exception exp)
             {
