@@ -35,7 +35,7 @@ Use the "Deploy to Azure" button to deploy an ARM template to create the followi
 </a>
 1. Azure Redis Cache Instance.
 
-## Step 3: Create a Redis Cache Instance 
+## Step 3: Create a Key Vault Instance with a secret and access policy 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https://raw.githubusercontent.com/ozgurkarahan/app-service-msi-keyvault-dotnet/master/ArmTemplates/redisdeploytemplate.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
