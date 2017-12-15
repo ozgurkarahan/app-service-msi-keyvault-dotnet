@@ -5,7 +5,7 @@ modified by: ozkara-msft
 ---
 
 
-# Use Key Vault from App Service with Managed Service Identity to Create Redis Connection String
+# Use Key Vault from App Service with Managed Service Identity to protect Redis primary key
 
 ## Background
 For Service-to-Azure-Service authentication, the approach so far involved creating an Azure AD application and associated credential, and using that credential to get a token. The sample [here](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-use-from-web-application) shows how this approach is used to authenticate to Azure Key Vault from a Web App. While this approach works well, there are two shortcomings:
